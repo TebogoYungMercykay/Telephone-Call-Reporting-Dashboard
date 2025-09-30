@@ -20,6 +20,10 @@ Three-level drill-down dashboard for call analytics:
 - **Reliable Routing** - Laravel named routes with `{yearMonth}` and `{extension}` parameters  
 - **Bootstrap Theme** - Bootstrap 5 styling with card layouts and breadcrumb navigation
 
+## 3 Minute Demo Video
+
+Watch a quick demo of the dashboard in action here: [Demo Video](docs/demo/demo.mp4)
+
 ## Quick Start
 
 ```bash
