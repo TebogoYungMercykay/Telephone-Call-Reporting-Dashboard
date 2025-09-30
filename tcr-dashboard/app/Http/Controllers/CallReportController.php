@@ -15,10 +15,8 @@ class CallReportController extends Controller
     {
         $currentYear = '2018';
 
-        // Get monthly data for current year (for chart)
         $monthlySummary = BvsCall::getMonthlySummary($currentYear);
 
-        // Get all-time monthly data (for table)
         $allTimeData = BvsCall::getAllTimeMonthlySummary();
 
         // Prepare chart data
@@ -86,7 +84,6 @@ class CallReportController extends Controller
         // Calculate totals from the paginated collection
         $totalCalls = $callDetails->total();
 
-        // Get the actual total cost (not just from paginated results)
         $totalCostResult = BvsCall::selectRaw('SUM(Cost) as total')
             ->whereRaw("DATE_FORMAT(CallTime, '%Y-%m') = ?", [$yearMonth])
             ->whereRaw("CallFrom LIKE ?", ["%($extension)%"])
@@ -121,7 +118,6 @@ class CallReportController extends Controller
         foreach ($allMonths as $index => $month) {
             $monthNum = $index + 1;
 
-            // Try to find the month data - check the actual property name
             $found = $monthlySummary->first(function($item) use ($monthNum) {
                 return (int)$item->month_num === $monthNum;
             });
