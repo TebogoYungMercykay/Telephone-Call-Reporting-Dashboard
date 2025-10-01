@@ -1,0 +1,66 @@
+body {
+    background-color: #f8f9fa;
+}
+s
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    border-left: 4px solid;
+}
+
+.stat-card.calls {
+    border-left-color: #0d6efd;
+}
+
+.stat-card.cost {
+    border-left-color: #198754;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+#callChart {
+    width: 100%;
+    height: 400px;
+}
+
+/* Table Sorting Styles */
+
+.sortable {
+    -webkit-user-select: none;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.sortable:hover {
+    background-color: #e9ecef;
+}
+
+.sort-icon {
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.sortable:hover .sort-icon {
+    opacity: 0.6;
+}
+
+.sortable.asc .sort-icon,
+.sortable.desc .sort-icon {
+    opacity: 1;
+}
